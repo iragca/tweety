@@ -388,7 +388,7 @@ class Tweet(_TwType):
         return Article(self._client, article_raw)
 
     def _get_limited_actions(self):
-        actions = find_objects(self._raw, "limited_actions", None, none_value=[])
+        actions = find_objects(self._raw, "limited_actions", None, none_value=[], recursive=False)
         all_actions = [i.get("action", "") for i in actions]
         return all_actions
 
@@ -677,6 +677,9 @@ class Tweet(_TwType):
         return self._original_tweet.get("bookmark_count", None)
 
     def _get_tweet_urls(self):
+        if self.retweeted_tweet:
+            return self.retweeted_tweet.urls
+
         urls = self._original_tweet.get('entities', {}).get('urls', [])
         urls = [URL(self._client, url) for url in urls]
 
