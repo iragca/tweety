@@ -232,7 +232,7 @@ Searching a Keyword
 
     Disclaimer: Some sensitive results may be hidden by your account's search settings.
     To view all results, disable *Hide sensitive content* and *Remove blocked and muted accounts* in
-   `https://x.com/settings/content_you_see`.
+   `https://x.com/settings/search`.
 
     .. py:data:: Arguments
 
