@@ -230,6 +230,10 @@ Searching a Keyword
 
     Search for a keyword or hashtag on Twitter (`iter` for generator)
 
+    Disclaimer: Some sensitive results may be hidden by your account's search settings.
+    To view all results, disable *Hide sensitive content* and *Remove blocked and muted accounts* in
+   `https://x.com/settings/content_you_see`.
+
     .. py:data:: Arguments
 
         .. py:data:: keyword (Required)
